@@ -1,4 +1,4 @@
-package com.cremarch;
+package com.cremarch.two_sum;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
