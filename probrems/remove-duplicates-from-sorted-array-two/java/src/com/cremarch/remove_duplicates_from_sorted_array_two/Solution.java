@@ -50,13 +50,11 @@ package com.cremarch.remove_duplicates_from_sorted_array_two;
 
 class Solution {
     public int removeDuplicates(int[] nums) {
-        if (nums.length <= 2) {
-            return nums.length;
-        }
+        if (nums.length <= 2) return nums.length;
         
         int k = 2;
         
-        for (int i = 2; i < nums.length; i++) {
+        for (int i=2; i<nums.length; i++) {
             if (nums[i] != nums[k-2]) {
                 nums[k] = nums[i];
                 k++;
