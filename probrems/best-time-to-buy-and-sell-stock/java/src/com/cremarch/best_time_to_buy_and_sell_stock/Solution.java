@@ -40,7 +40,7 @@ class Solution {
         // profit amount = p
         int p = 0;
 
-        // linear search minimam number 
+        // linear search minimum number 
         for (int i=1; i<prices.length; i++){
             // if prices[i] lager than prices[b], update b
             if(prices[i] < prices[b]) b = i;
