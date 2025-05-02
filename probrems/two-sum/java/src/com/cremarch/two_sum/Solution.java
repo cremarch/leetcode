@@ -35,19 +35,22 @@
 
 package com.cremarch.two_sum;
 
+import java.util.Map;
+import java.util.HashMap;
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] answer_list = new int[2];
-        for (int i = 0; i < nums.length; i++){
-            for (int j = i+1; j < nums.length; j++){
-                int answer = nums[i] + nums[j];
-                if (answer == target){
-                    answer_list[0] = i;
-                    answer_list[1] = j;
-                    return answer_list;
-                }
+
+        Map<Integer,Integer> map = new HashMap<>();
+        
+        for (int x=0; x < nums.length; x++){
+            int diff = target - nums[x];
+            if (map.containsKey(diff)){
+                return new int[]{x, map.get(diff)};
             }
+            map.put(nums[x], x);
         }
-        return answer_list;
+
+        throw new UnsupportedOperationException("No two sum solution found");
     }
 }
