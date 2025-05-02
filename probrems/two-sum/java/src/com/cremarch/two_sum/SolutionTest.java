@@ -54,7 +54,7 @@ public class SolutionTest {
     
     @Test
     public void testLargerArray() {
-        int[] nums = {1, 5, 8, 10, 13, 21};
+        int[] nums = {1, 5, 9, 10, 13, 21};
         int target = 18;
         int[] expected = {1, 4}; // 5 + 13 = 18
         int[] result = solution.twoSum(nums, target);
@@ -76,4 +76,3 @@ public class SolutionTest {
                    Arrays.equals(expected, result));
     }
 }
-
